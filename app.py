@@ -5,93 +5,146 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return """
-    <html>
-    <head>
-        <title>Richie | Lead Generation Specialist</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                background-color: #f5f5f5;
-            }
-            .container {
-                max-width: 900px;
-                margin: auto;
-                padding: 20px;
-                background: white;
-            }
-            h1 {
-                color: #333;
-            }
-            .section {
-                margin-top: 30px;
-            }
-            .highlight {
-                color: #ff6600;
-                font-weight: bold;
-            }
-            .btn {
-                display: inline-block;
-                padding: 10px 15px;
-                background: #ff6600;
-                color: white;
-                text-decoration: none;
-                margin-top: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>Richie</h1>
-            <p class="highlight">Lead Generation Specialist (2+ Years Experience)</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Richie | Lead Generation Specialist</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+            color: white;
+        }
 
-            <div class="section">
-                <h2>About Me</h2>
-                <p>
-                I am a Lead Generation Specialist with over 2 years of experience
-                focusing on B2B lead generation. I help businesses find targeted
-                prospects, decision-makers, and verified contact data to support
-                their sales growth.
-                </p>
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: #f97316;
+            font-weight: bold;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f97316;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.8;
+        }
+
+        a {
+            color: #f97316;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>Richie</h1>
+        <p class="highlight">Lead Generation Specialist | B2B & B2C Expert (2+ Years Experience)</p>
+        <p>I help businesses find high-quality leads, decision-makers, and verified contacts to grow sales.</p>
+    </div>
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            Experienced Lead Generation Specialist focused on B2B and B2C outreach.
+            Skilled in building targeted prospect lists, email campaigns, LinkedIn outreach,
+            and data-driven lead research.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Tools I Use</h2>
+        <div>
+            <span class="badge">Sales Navigator</span>
+            <span class="badge">Apollo</span>
+            <span class="badge">Python</span>
+            <span class="badge">Google Maps</span>
+            <span class="badge">LinkedIn Research</span>
+            <span class="badge">Email Extractor 7</span>
+            <span class="badge">Let’s Extract Email Studio</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Services</h2>
+        <div class="grid">
+            <div>
+                <h3>B2B Lead Generation</h3>
+                <p>Targeted business leads and decision-makers.</p>
             </div>
-
-            <div class="section">
-                <h2>What I Do</h2>
-                <ul>
-                    <li>B2B Lead Generation</li>
-                    <li>Email & Contact Research</li>
-                    <li>LinkedIn & Google Prospecting</li>
-                    <li>Data Scraping & Web Research</li>
-                    <li>CRM & Database Building</li>
-                </ul>
+            <div>
+                <h3>B2C Lead Generation</h3>
+                <p>Consumer targeting and outreach campaigns.</p>
             </div>
-
-            <div class="section">
-                <h2>Tools I Use</h2>
-                <ul>
-                    <li>Apollo</li>
-                    <li>LinkedIn</li>
-                    <li>Google Maps</li>
-                    <li>Hunter.io</li>
-                    <li>Python (Web Scraping)</li>
-                </ul>
+            <div>
+                <h3>Email Outreach</h3>
+                <p>Cold email campaigns and response tracking.</p>
             </div>
-
-            <div class="section">
-                <h2>Contact Me</h2>
-                <p>Email: sales2@ohoryelectric.com</p>
-                <p>Phone: +63 962 860 7876</p>
-            </div>
-
-            <div class="section">
-                <h2>Let’s Work Together</h2>
-                <p>I help businesses find high-quality leads that convert into real clients.</p>
-                <a class="btn" href="mailto:sales2@ohoryelectric.com">Contact Me</a>
+            <div>
+                <h3>LinkedIn Outreach</h3>
+                <p>Direct messaging and connection campaigns.</p>
             </div>
         </div>
-    </body>
-    </html>
-    """
+    </div>
+
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <b>richiedelapazpaz@gmail.com</b></p>
+        <p>Phone: <b>+63 995 127 9375</b></p>
+        <p>Open for freelance & commission-based projects.</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 Richie | Lead Generation Specialist
+</div>
+
+</body>
+</html>
+"""
 
 if __name__ == "__main__":
     import os
