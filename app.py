@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
@@ -30,7 +31,6 @@ def home():
 
         .hero h1 {
             font-size: 40px;
-            margin-bottom: 10px;
         }
 
         .highlight {
@@ -43,7 +43,6 @@ def home():
             padding: 20px;
             border-radius: 12px;
             margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
         }
 
         .grid {
@@ -64,13 +63,7 @@ def home():
         .footer {
             text-align: center;
             margin-top: 40px;
-            padding: 20px;
             opacity: 0.8;
-        }
-
-        a {
-            color: #f97316;
-            text-decoration: none;
         }
     </style>
 </head>
@@ -81,16 +74,15 @@ def home():
 
     <div class="hero">
         <h1>Richie</h1>
-        <p class="highlight">Lead Generation Specialist | B2B & B2C Expert (2+ Years Experience)</p>
-        <p>I help businesses find high-quality leads, decision-makers, and verified contacts to grow sales.</p>
+        <p class="highlight">Lead Generation Specialist | B2B & B2C (2+ Years Experience)</p>
+        <p>I help businesses generate high-quality leads and verified contacts.</p>
     </div>
 
     <div class="card">
         <h2>About Me</h2>
         <p>
-            Experienced Lead Generation Specialist focused on B2B and B2C outreach.
-            Skilled in building targeted prospect lists, email campaigns, LinkedIn outreach,
-            and data-driven lead research.
+            Lead Generation Specialist focused on B2B and B2C outreach, email campaigns,
+            LinkedIn prospecting, and data-driven lead research.
         </p>
     </div>
 
@@ -111,29 +103,28 @@ def home():
         <h2>Services</h2>
         <div class="grid">
             <div>
-                <h3>B2B Lead Generation</h3>
-                <p>Targeted business leads and decision-makers.</p>
+                <h3>B2B Leads</h3>
+                <p>Decision makers & companies</p>
             </div>
             <div>
-                <h3>B2C Lead Generation</h3>
-                <p>Consumer targeting and outreach campaigns.</p>
+                <h3>B2C Leads</h3>
+                <p>Targeted consumer outreach</p>
             </div>
             <div>
                 <h3>Email Outreach</h3>
-                <p>Cold email campaigns and response tracking.</p>
+                <p>Cold email campaigns</p>
             </div>
             <div>
                 <h3>LinkedIn Outreach</h3>
-                <p>Direct messaging and connection campaigns.</p>
+                <p>Direct prospect messaging</p>
             </div>
         </div>
     </div>
 
     <div class="card">
         <h2>Contact</h2>
-        <p>Email: <b>richiedelapazpaz@gmail.com</b></p>
-        <p>Phone: <b>+63 995 127 9375</b></p>
-        <p>Open for freelance & commission-based projects.</p>
+        <p>Email: richiedelapazpaz@gmail.com</p>
+        <p>Phone: +63 995 127 9375</p>
     </div>
 
 </div>
@@ -147,6 +138,5 @@ def home():
 """
 
 if __name__ == "__main__":
-    import os
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
